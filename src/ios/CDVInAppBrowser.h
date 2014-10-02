@@ -6,9 +6,9 @@
  to you under the Apache License, Version 2.0 (the
  "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
-
+ 
  http://www.apache.org/licenses/LICENSE-2.0
-
+ 
  Unless required by applicable law or agreed to in writing,
  software distributed under the License is distributed on an
  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -64,7 +64,7 @@
 @end
 
 @interface CDVInAppBrowserViewController : UIViewController <UIWebViewDelegate, CDVScreenOrientationDelegate>{
-    @private
+@private
     NSString* _userAgent;
     NSString* _prevUserAgent;
     NSInteger _userAgentLockToken;
@@ -78,6 +78,10 @@
 @property (nonatomic, strong) IBOutlet UIBarButtonItem* backButton;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem* forwardButton;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView* spinner;
+@property (nonatomic, strong) IBOutlet UIView *hudView;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicatorView;
+@property (nonatomic, strong) IBOutlet UILabel *captionLabel;
+
 @property (nonatomic, strong) IBOutlet UIToolbar* toolbar;
 
 @property (nonatomic, weak) id <CDVScreenOrientationDelegate> orientationDelegate;
